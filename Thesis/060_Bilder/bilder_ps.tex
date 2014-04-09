@@ -1,0 +1,35 @@
+%%
+%% Kapitel:
+%%
+\chapter{Bilder mit PS}
+\label{BilderPS}
+%%======================================================================
+
+
+
+\section{Bilder}
+
+Etwas trickreich, da \LaTeX\ ursprünglich dafür nicht vorgesehen war.
+
+\subsection{Postscript}
+  
+Die einfachste Variante benutzt \emph{Postscript}. Hat den Vorteil,
+dass man CAD-Zeichnungen einfach einbinden kann. Beim Skalieren
+werden die Strichbreiten auch skaliert. JPGs kann man mit
+\texttt{jpeg2ps} in Postscript umwandeln.\\
+Nachteil: Drucker muss Postscript können, \texttt{ghostscript} muss installiert sein!
+
+{\begin{figure}[h]
+              \begin{center}
+              \epsfig{figure=0060/bild_ps.ps, width=100mm, angle=0}
+              \caption{\label{fig:bild1ps} Postscriptbild} mit epsfig
+              \end{center}
+              \end{figure}
+             }
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+%%
+%% Kapitel:
+%%
+\chapter{Schriften}
+\label{sec:Schriften}
+%%======================================================================
+
+Die Standardschriftfamilie wird bereits im Vorspann definiert
+(siehe FBMStyle.tex). Wenn keine besonderen Vorgaben erfolgen, wird 
+mit dem Standardfont gearbeitet (CM: Computer Modern). 
+Bei dieser Auswahl sind die Fonts sehr gut aufeinander abgestimmt.
+Liebhaber der
+serifenlosen Schrift aktivieren \zB \\
+\verb#\renewcommand{\familydefault}{phv}#.
+Die Gleichungen werden allerdings weiter mit Serifen erscheinen.
+
+\section{Schriftstil}
+%
+\textrm{Normalerweise ist der Text in diesem Schriftstil gesetzt.}
+\textbf{Das hier ist fetter Text}. Jetzt kommt
+\textsl{schräge Schrift} und hier kommt
+\textit{eine andere Art schräger Schrift, die man kursiv nennt}.
+
+ 
+
+\subsection{Hervorhebung}
+%
+In diesem Absatz ist ein Wort \emph{hervorgehoben}. Dafür
+gibt es den Befehl emph. \emph{Er hat den ganz großen 
+Vorteil, dass man innerhalb einer Hervorhebung
+etwas \emph{hervorheben} kann.} 
+
+
+\section{Schriftart}
+%
+Das ist die normale proportionale Schriftart mit \emph{Serifen}.
+
+\texttt{Das hier ist Typewriter, so ne Art\\ 
+Schreibmaschinenschrift. 
+Sie ist nichtproportional.
+Es gibt sie auch in \textbf{fett} und
+\textsl{schräg}.}
+
+\textsf{Das hier ist die proportionale Schrift ohne
+Serifen. Gibts natürlich auch in \textsl{schräg} und in \textbf{fett}
+Wird normalerweise für Überschriften benutzt.}
+
+
+\section{Schriftgrößen}
+%
+Die einzelnen Schriftgrößen werden in Abhängigkeit von
+der Basisschrift automatisch berechnet. Aber manchmal
+muss es
+
+\tiny{winzig} 
+\scriptsize{sehr klein} 
+\footnotesize{ziemlich klein}
+\small{klein}
+\normalsize{normal}
+\large{etwas größer} 
+\Large{ziemlich groß}
+\LARGE{groß}
+\huge{sehr groß}
+\Huge{riesig}
+
+\normalsize

@@ -1,0 +1,53 @@
+%%
+%% Kapitel:
+%%
+\chapter{Tabellen}
+\label{cha:Tabellen}
+%%======================================================================
+%
+\section{Einfach mit Tabs}
+%
+Das wichtigste zuerst: keine vertikalen Linien verwenden und nur wenig
+horizontale! Das sieht besser aus.
+%
+\begin{tabbing}
+\label{tbl:tabs}
+%Tabulatoren setzen
+Erste Spalte \hspace{7em} \= Zweite Spalte \hspace{7em} \= Dritte Spalte\\
+%
+eins \> zwei \> drei \\
+eins \> zwei \> drei \\
+eins \> zwei \> drei \\
+%
+\end{tabbing}
+%
+%----------------------------------------------------------------------
+%
+\section{Eine schöne Tabelle}
+%
+\begin{table}[!h]
+\begin{center}
+\caption{\label{tbl:Mit_allem}Tabellenüberschrift008}
+\begin{tabular}{lrc}
+ \hline \\
+   linksbündig & rechtsbündig & zentriert \\
+   \\
+ \hline  \\
+   123         &  123         & 123 \\
+ 
+   eins        &  zwei        & drei \\
+   \\
+ \hline 
+
+\end{tabular}
+
+\end{center}
+\end{table}
+
+Wenn viele Tabellen erzeugt werden, sollte nach etwa 10 Tabellen ein
+{\verb# \clearpage #} folgen. Das leert den Puffer und vermeidet Fehlermeldungen.
+
+
+%%======================================================================
+%\input{050_Tabellen/vieleTabellen}  % Test für langes Tabellenverzeichnis
+

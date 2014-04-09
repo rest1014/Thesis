@@ -1,0 +1,41 @@
+%-----------------------------------------------------------------
+% Beschriftung des Titelblatts - Vorderseite
+%-------------------------------------------------------------------
+\pagestyle{scrheadings}            % Kopf- und Fusszeilen
+\clearscrheadfoot                  % Alles auf "" setzen
+\setcounter{page}{1}       		  % anpassen: wenn 1 Seitig  dannn 2     
+\pagenumbering{roman}
+
+\usepackage{001_Titel/0011_TitlePage-HsKa_Setup/HsKAtitle12}
+\department{Fakultät für Wirtschaftsinformatik}
+%\course{Studiengang Wirtschaftinformatik}
+
+\thesistype{Bachelorthesis}  % Masterthesis o.ä
+\author{*Vorname Nachname}
+
+\title{Mustertitel erste  Zeile} 
+
+\thesisno{*D 06/01}
+
+
+\BDate{*Geburtstag}
+\BLocation{*Geburtsort}
+\matno{*1234567}
+
+
+\companyname{*Organisation}
+\tutor{*1. Organisation}{*2. Hochschule}
+\location{*Karlsruhe}
+\duration{*01. 08. 2006   bis  31. 01. 2007}
+
+\restrictionnotice{*S P E R R V E R M E R K}      
+%\restrictionnotice{*** V E R T R A U L I C H ***}      
+%%
+% Bemerkung auf der Rückseite, wenn zweiseitig
+%
+\Schriftsatz{%
+    Satz und Herstellung:\\
+    {\LaTeX} und KomaSkript  /  MiKTeX 2.5, TeXnicCenter 1 Beta 7.01.\\
+    Font: Computer Modern, 12 pt\\
+    Druckdatum: \today
+    }%

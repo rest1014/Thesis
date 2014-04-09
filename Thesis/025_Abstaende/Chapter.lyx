@@ -1,0 +1,620 @@
+#LyX file created by tex2lyx 2.0.7.1
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\options final,pointlessnumbers,normalheadings,halfparskip,idxtotoc,headinclude,DIV15,BCOR14mm
+\use_default_options false
+\language english
+\language_package \usepackage{ngerman}
+\inputencoding latin1
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize 12
+\spacing single
+\use_hyperref 1
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 1
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Kapitel:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+chapter{Abstände}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Abstaende"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%======================================================================
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Abstände, Einzüge, Zentrierungen und so weiter.
+\end_layout
+
+\begin_layout Section
+
+Umbruch
+\end_layout
+
+\begin_layout Standard
+
+Einen Zeilenumbruch wird mit 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+verb=
+\backslash
+
+\backslash
+=
+\end_layout
+
+\end_inset
+
+ erzeugt. 
+\begin_inset Newline newline
+\end_inset
+
+ Alternativ kann eine neue Zeile mit 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+verb# 
+\backslash
+newline #
+\end_layout
+
+\end_inset
+
+ angefangen werden.
+\end_layout
+
+\begin_layout Standard
+
+Ein neuer Absatz entsteht durch eine Leerzeile im Quelltext. Leerzeilen müssen also mit 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+verb#kein neuer Absatz beginnen soll.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+Eine neue Seite wird mit 
+\backslash
+verb=
+\backslash
+newpage= erzeugt. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+section{Abstände}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+subsection{Zeilenabstand}
+\end_layout
+
+\begin_layout Standard
+
+Der folgende Absatz verdeutlicht, dass einzeiliger Text nicht immer ausreichend ist.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{spacing}{1.0}.
+\end_layout
+
+\begin_layout Standard
+
+Das Model von Chisholm bezieht den Zweiphasenmultiplikator $
+\backslash
+phi^{2}
+\backslash
+idx{f,g}$ auf die flüssige Phase. Zur Berechnung von $
+\backslash
+Delta p
+\backslash
+idx{f}$ wird angenommen, dass die Flüssigkeit allein im Rohr strömt und den Querschnitt vollständig ausfüllt. Das Grundmodell beschreibt, dass man den zweiphasigen Druckabfall $
+\backslash
+Delta p
+\backslash
+idx{R}$ mit dem Druckabfall einer Phase $
+\backslash
+Delta p
+\backslash
+idx{f,g}$ und mit einem Zweiphasenmultiplikator $
+\backslash
+phi^{2}
+\backslash
+idx{f,g}$ berechnen kann.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{spacing}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+Ein 1,2-zeiliger Abstand im ganzen Dokument kann Abhilfe schaffen.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{spacing}{1.2}
+\end_layout
+
+\begin_layout Standard
+
+Das Model von Chisholm bezieht den Zweiphasenmultiplikator $
+\backslash
+phi^{2}
+\backslash
+idx{f,g}$ auf die flüssige Phase. Zur Berechnung von $
+\backslash
+Delta p
+\backslash
+idx{f}$ wird angenommen, dass die Flüssigkeit allein im Rohr strömt und den Querschnitt vollständig ausfüllt. Das Grundmodell beschreibt, dass man den zweiphasigen Druckabfall $
+\backslash
+Delta p
+\backslash
+idx{R}$ mit dem Druckabfall einer Phase $
+\backslash
+Delta p
+\backslash
+idx{f,g}$ und mit einem Zweiphasenmultiplikator $
+\backslash
+phi^{2}
+\backslash
+idx{f,g}$ berechnen kann.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{spacing}
+\end_layout
+
+\begin_layout Standard
+
+  
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+subsection{Maßeinheiten}
+\end_layout
+
+\begin_layout Standard
+
+{
+\backslash
+LaTeX} kennt die üblichen Maßeinheiten wie beispielsweise mm, cm, pt. 
+\end_layout
+
+\begin_layout Standard
+
+Aber besser sind für Breiten die 
+\backslash
+emph{em}, was der Breite eines großen
+\end_layout
+
+\begin_layout Standard
+
+M in der Basisschrift entspricht. Für Höhen wird 
+\backslash
+emph{ex} genommen, 
+\end_layout
+
+\begin_layout Standard
+
+was der Höhe eines großen X entspricht.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+subsection{Text schieben}
+\end_layout
+
+\begin_layout Standard
+
+Mit 
+\backslash
+zB 
+\backslash
+verb=
+\backslash
+hspace{5em}= wird horizontal 
+\backslash
+hspace{5em} verschoben. 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+verb=
+\backslash
+hfill= verschiebt den Text  an den 
+\backslash
+hfill rechten 
+\backslash
+hfill Rand.
+\end_layout
+
+\begin_layout Standard
+
+Jetzt folgt ein 
+\backslash
+verb=
+\backslash
+hfill{12ex}= 
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+vspace{12ex}
+\end_layout
+
+\begin_layout Standard
+
+um den Text weiter unten fortzusetzen.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+verb=
+\backslash
+vfill= füllt die Seite (siehe Rückseite der Titelseite). 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+section{Zentrierter Text}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+centerline{So wird eine Zeile zentriert.}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Standard
+
+Hier ist ein zentrierter Absatz:
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end_layout
+
+\begin_layout Standard
+
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+section{Eingezogener Text}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+marginline{
+\backslash
+rule[-20mm]{2mm}{20mm}} 
+\backslash
+marginline{lange flinke Luft-Notiz}
+\end_layout
+
+\begin_layout Standard
+
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern
+\end_layout
+
+\begin_layout Standard
+
+und merkt sich das mit einem Balken.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+begin{quote}
+\end_layout
+
+\begin_layout Standard
+
+   
+\backslash
+verb#
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+# wird unter anderem für Zitate benutzt. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. 
+\end_layout
+
+\begin_layout Standard
+
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end_layout
+
+\end_body
+\end_document

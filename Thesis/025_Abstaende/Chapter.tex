@@ -1,0 +1,91 @@
+%%
+%% Kapitel:
+%%
+\chapter{Abstände}
+\label{sec:Abstaende}
+%%======================================================================
+
+Abstände, Einzüge, Zentrierungen und so weiter.
+
+\section{Umbruch}
+%
+Einen Zeilenumbruch wird  mit \verb=\\= erzeugt. \\ 
+Alternativ kann eine neue Zeile mit
+\verb# \newline # angefangen werden.
+
+Ein neuer Absatz entsteht durch eine Leerzeile im Quelltext.
+Leerzeilen müssen also mit \verb#%# beginnen, wenn
+kein neuer Absatz beginnen soll.
+
+Eine neue Seite wird mit \verb=\newpage= erzeugt. 
+
+
+\section{Abstände}
+%
+\subsection{Zeilenabstand}
+Der folgende Absatz verdeutlicht, dass einzeiliger Text nicht immer ausreichend ist.
+
+
+\begin{spacing}{1.0}.
+%\linespread{1,0}          % Zeilenabstand erst nach dem Titel setzen !
+Das Model von Chisholm bezieht den Zweiphasenmultiplikator $\phi^{2}\idx{f,g}$ auf die flüssige Phase. Zur Berechnung von $\Delta p\idx{f}$ wird angenommen, dass die Flüssigkeit allein im Rohr strömt und den Querschnitt vollständig ausfüllt. Das Grundmodell beschreibt, dass man den zweiphasigen Druckabfall $\Delta p\idx{R}$ mit dem Druckabfall einer Phase $\Delta p\idx{f,g}$ und mit einem Zweiphasenmultiplikator $\phi^{2}\idx{f,g}$ berechnen kann.
+\end{spacing}
+
+Ein 1,2-zeiliger Abstand im ganzen Dokument kann Abhilfe schaffen.
+
+\begin{spacing}{1.2}
+Das Model von Chisholm bezieht den Zweiphasenmultiplikator $\phi^{2}\idx{f,g}$ auf die flüssige Phase. Zur Berechnung von $\Delta p\idx{f}$ wird angenommen, dass die Flüssigkeit allein im Rohr strömt und den Querschnitt vollständig ausfüllt. Das Grundmodell beschreibt, dass man den zweiphasigen Druckabfall $\Delta p\idx{R}$ mit dem Druckabfall einer Phase $\Delta p\idx{f,g}$ und mit einem Zweiphasenmultiplikator $\phi^{2}\idx{f,g}$ berechnen kann.
+\end{spacing}
+  
+
+\subsection{Maßeinheiten}
+%
+{\LaTeX} kennt die üblichen Maßeinheiten wie beispielsweise mm, cm, pt. 
+Aber besser sind für Breiten die \emph{em}, was der Breite eines großen
+M in der Basisschrift entspricht. Für Höhen wird \emph{ex} genommen, 
+was der Höhe eines großen X entspricht.
+%
+%
+\subsection{Text schieben}
+%
+Mit \zB \verb=\hspace{5em}= wird horizontal \hspace{5em} verschoben. 
+\verb=\hfill= verschiebt den Text  an den \hfill rechten \hfill Rand.%
+
+Jetzt folgt ein \verb=\hfill{12ex}= 
+\vspace{12ex}
+um den Text weiter unten fortzusetzen.
+\verb=\vfill= füllt die Seite (siehe Rückseite der Titelseite). 
+
+
+\section{Zentrierter Text}
+
+\centerline{So wird eine Zeile zentriert.}
+
+\begin{center}
+Hier ist ein zentrierter Absatz:\\
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end{center}
+
+
+
+\section{Eingezogener Text}
+
+\marginline{\rule[-20mm]{2mm}{20mm}} %Anfangspunkt, Dicke, Höhe
+%\marginpar[lange linke Luft-Notiz]{rechte Dampfschifffahrtsgesellschaftskapitän 
+%rechte rechte rechte rechte rechte rechte rechte rechte }
+%
+\marginline{lange flinke Luft-Notiz}
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern
+und merkt sich das mit einem Balken.
+
+\begin{quote}
+   \verb#\begin{quote}# wird unter anderem für Zitate benutzt.
+   Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+   Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end{quote}
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+
+
+

@@ -1,0 +1,52 @@
+%%
+%% Kapitel:
+%%
+\chapter{Referenzen}
+\label{cha:Referenzen}
+%%======================================================================
+
+
+
+%----------------------------------------------------------------
+\section{Referenzen}
+
+Die Kapitel, Abschnitte, Gleichungen, Bilder, Tabellen etc.
+werden mit \verb#\label{name}# benannt.
+
+Die Referenz wird gebildet indem \verb#\ref{name}# im Text erscheint.
+soll auf die Seite verwiesen werden, auf der dieses Objekt steht, wird
+der Befehl \verb#\pageref{name}# genutzt.\\
+Beispiel: Das Kapitel \emph{Listen} hat die Nummer \ref{sec:Listen}
+und beginnt auf Seite \pageref{sec:Listen}.
+
+\textbf{Wichtig: Groß/Kleinschreibung wird unterschieden!}\\
+
+Tabelle \emph{Tabellenüberschrift008} hat die Nummer \ref{tbl:Mit_allem} und
+steht auf Seite \pageref{tbl:Mit_allem}.
+
+
+Die Einsteinsche Gleichung steht auf Seite \pageref{eqt:einstein}
+und hat die Nummer \ref{eqt:einstein}.
+
+Das Bild steht auf Seite \pageref{fig:bild1}
+und hat die Nummer \ref{fig:bild1}.
+
+
+%----------------------------------------------------------------
+\section{Fußnoten}
+
+Ein Beispiel für eine Fußnote\footnotemark. 
+\footnotetext{Und hier ist sie, die Fußnote!}
+
+
+%----------------------------------------------------------------
+\section{Zitate}
+
+Literatur wird mit dem Befehl \verb#\cite{name}# zitiert, 
+\zB \cite{Einstein}.
+
+%
+%
+%\input{080_Macros/fuellung}
+%
+%

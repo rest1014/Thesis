@@ -1,0 +1,80 @@
+%%
+%% Kapitel:
+%%
+\chapter{Einteilung in Kapitel}
+\label{cha:Einteilung_in_Kapitel}      %% Keine Umlaute! Keine Leerzeichen!
+
+%\index{Einteilung}\index{Kapitel@\texttt{\textbackslash Kapitel}|textbf}
+%%======================================================================
+
+Das hier ist eine Datei, die ein einzelnes Kapitel enthält. Das
+ganze Buch wird aus solchen Dateien zusammengesetzt, in dem man
+mittels einer Include Anweisung in MAIN.TEX die einzelnen Kapitel
+hintereinander hängt. 
+
+\section{Ein Unterkapitel}
+Nach dem Chapter kommen die Sections und dann etwas roter Text gefolgt von
+unsichtbar (weiss) formatiertem Text. Dann wieder rot und schließlich 
+verstecker Text.
+
+\textcolor{red}{rot geschrieben}
+ausgeblendet \textcolor{white}{weiss geschrieben}
+\textcolor{red}{rot geschrieben}
+Nächste Zeile versteckt.
+\Hide{1 Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.}\\
+2. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+Franz tastet die Taste \Ovalbox{strg}.
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+
+
+%------------------------------------------------------------------------------
+\section{Abschnitte}
+
+Natürlich kann lässt sich der Text noch weiter unterteilen. Die nächste Stufe
+ist dann ein Unterabschnitt oder auch: {\verb# \subsection #}.
+
+\subsection{Unterabschnitte}
+Hier wird gezeigt wie Source-Code darstellt werden kann. Die Einfachheit erschließt sich dem geneigten Betrachter spontan, jedoch erst im Quelltext der \LaTeX-Datei.
+%
+%---- 
+%
+\lstinputlisting[caption=iMain.tex, label=lst:beispiel01, frame=tb]%
+	{_iMain.tex}
+
+
+%------------------------------------------------------------------------------
+
+%======================================================================================
+\section{Acrobat und TeXnicCenter}
+
+Hier ein paar eingerahmte Hinweise zum Umgang mit dem TeXnicCenter und MiKTeX.
+
+\begin{lstlisting}
+
+Using Acrobat reader
+TeXnicCenter has the ability to integrate nicely with Adobe Acrobat, such that recently compiled PDF files are opened automatically, and existing open PDF files are closed automatically upon recompilation. This is done using DDE calls to Acrobat.
+
+You can insert the following lines of command in TeXnicCenter to integrate it with Acrobat. This particularly enables you to compile your files in pdf without having to close the previous document first (necessary in the default option). Integration is setup in the Build | Define Output Profiles menu option. Select a profile "LaTeX=>PDF" or "LaTeX=>PS=>PDF", and click on the viewer window :
+
+view project's output:  [v] DDE command.\\
+command: [DocOpen("%bm.pdf")][FileOpen("%bm.pdf")]\\
+server: acroview\\
+topic: control\\
+
+forward search: [v] DDE command.\\
+command: [DocOpen("%bm.pdf")][FileOpen("%bm.pdf")]\\
+server: acroview\\
+topic: control\\
+
+Close document before running (La)TeX: [v] DDE command\\
+command: [DocClose("%bm.pdf")]\\
+server: acroview\\
+topic: control\\
+
+%\end{verbatim}
+\end{lstlisting}
+
+
+
+

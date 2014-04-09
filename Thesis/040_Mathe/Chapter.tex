@@ -1,0 +1,52 @@
+%%
+%% Kapitel:
+%%
+\chapter{Mathematik}
+\label{cha:Mathematik}
+%%======================================================================
+
+\section{Im Text}
+%
+Zuerst ein paar griechische Buchstaben: $\alpha$, $\beta$, $\tau$, $\pi$ $\xi$ $\psi$ $\Psi$.
+%
+Und was der Ingenieur mag: $\sigma\idx{zul}$, $W\idx{xy}$. 
+
+
+\section{Abgesetzte Gleichungen}
+%
+Gleichungen werden automatisch mit Nummer, die auf das Kapitel enthält versehen:
+\begin{equation}
+\label{eqt:einstein}
+E = mc^2
+\end{equation}
+
+Variablen werden immer automatisch kursiv gedruckt. Das e für die Eulersche Zahl muss 
+daher in Gleichungen extra  mit  {\verb# \mathrm{e} #} \newline
+als Nicht-Variable gekennzeichnet werden.
+
+Nach DIN stehen Integralgrenzen  ober- bzw. unterhalb.\newline
+Dazu wird der Befehl  {\verb# \int\limits_0^3 #} genutzt. Ein Beispiel gibt
+\RefEq{eqt:integral}
+\begin{equation}
+\label{eqt:integral}
+   \int\limits_0^3{x^2}dx=9 .
+\end{equation}
+%
+Indizes werden im Allgemeinen nicht kursiv geschrieben, dazu verhilft ein
+eigenes Makro {\verb+\newcommand{\idx}[1]{_\mathrm{#1}+}. Ein Beispiel
+wird in \RefEq{eqt:bauer1} gegeben
+\begin{equation}
+  \label{eqt:bauer1}
+   \dot{Q}\idx{Fl"ache} \sim \frac{1}{A\idx{Aussenwandfassade}}.
+\end{equation}
+%
+
+Gleichungen ohne Nummern können mit mit \verb# \begin{displaymath} bzw. \end # erzeugt werden, 
+alternativ mit \verb# \[ \] #
+\begin{displaymath}
+\sum_1^{\Xi} {\Psi}^2 = \frac{
+          \int_{a_i^3}^{\sqrt{\omega - z^7}}
+      }{
+          \sqrt{\sqrt{e^{x^-3}}}
+     }.
+\end{displaymath}

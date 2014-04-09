@@ -1,0 +1,92 @@
+%%
+%%  Hauptdatei
+%%
+%%  Projekt: Beispiel 
+%%  Autor:   Arnemann
+%%  Status:  
+%%  Datum:   060814ar
+%%           060815ar : Sperrvermerk und Zusammenfassung ergänzt
+%%           060830ar : v4 Anhang Seitennummerierung, viele Tabellen 
+%%           060905ar : v5
+%%           060908ar : v6
+%%           060912ar : v6 FBMStyle_develop
+%%           061025ar : v7 Richtlinentext entfernt
+%%
+%===================================================================
+%% P R Ä A M B E L
+%-------------------------------------------------------------------
+%
+\input{FBMStyle_Develop}
+%\input{FBMStyle}
+%
+%****
+\include{000_Setup/pdf-setup}
+\include{000_Setup/macros}         % Macros lagen
+%\include{001_Titel/Titelseite}     
+\include{001_Titel/Titelseite_Neu}
+%\onehalfspacing
+%\linespread{1.2}          % Zeilenabstand erst nach dem Titel setzen !
+
+%===================================================================
+% B E G I N N  D E S  D O K U M E N T S
+%
+%% Hier kommen die einzelnen Kapitel, die jeweils in einem eigenen
+%% Folder stehen. Dateiendung MUSS .tex sein. Wird hier nicht angegeben. 
+%% W I C H T I G : Pfade in Unix-Syntax d.h.:
+%% 0010/chapter und NICHT 0010\chapter !!!
+%% ALLE PFADE RELATIV ZU DIESER DATEI!!
+%-------------------------------------------------------------------
+\begin{document}
+
+\maketitle                        % Titelblatt erzeugen
+%s-----------
+\include{001_Titel/-pagestyle-pre}
+\include{001_Titel/Erklaerung}     % Hochschul-spezifisch
+\include{001_Titel/Danksagung}
+%-----------
+\include{001_Titel/Inhalt_Listen}
+%\include{001_Titel/Nomenklatur}    % Formel und Abkürzungsverzeichnis 
+\include{001_Titel/Zusammenfassung}% als Kurzfassung formuliert
+%
+%-------------------------------------------------------------------
+%  Hauptteil
+%-------------------------------------------------------------------
+%
+\include{001_Titel/-pagestyle-main}
+\include{010_Struktur/Chapter}
+\include{020_Schriften/Chapter}
+\include{025_Abstaende/Chapter}
+\include{030_Listen/Chapter}
+\include{040_Mathe/Chapter}
+\include{050_Tabellen/Chapter}
+%                                  % eps: sehr große Dateien: jpg besser 
+%\include{060_Bilder/bilder_eps}   % DVI:okok  PDF:niO  PS:ok   DVI->PS->PDF:     eps:
+\include{060_Bilder/bilder_jpg}   % DVI:ok?   PDF:ok   PS:niO  DVI->PS->PDF:niO   jpg:++ 
+%                                              pdf: png:ok  
+\include{060_Bilder/bilder_pdf}   % DVI:niO   PDF:ok   PS:niO  DVI->PS->PDF:niO   pdf:+ macht Problem
+%\include{060_Bilder/bilder_ps}    % DVI:niO  PDF:niO  PS:niO  DVI->PS->PDF:ok
+%\include{060_Bilder/bilder_ps_in} % DVI:niO   PDF:niO  PS:niO  DVI->PS->PDF:niO
+\include{070_Referenzen/Chapter}
+\include{080_Macros/Chapter}
+%-------------------------------------------------------------------
+% Literaturliste
+%-------------------------------------------------------------------
+\input{030_Listen/Literatur1fach}       %Pfad zur Datei
+\input{030_Listen/Literatur}            %Pfad zur Datei
+%-------------------------------------------------------------------
+% Index
+%-------------------------------------------------------------------
+\printindex
+%-------------------------------------------------------------------
+\newpage
+%-------------------------------------------------------------------
+% Anhang
+%-------------------------------------------------------------------
+\appendix        % Alles was hier kommt, landet im Anhang
+%-------------------------------------------------------------------
+%\include{090_Anhang/Anhang02}
+\include{090_Anhang/Anhang01}
+\end{document}   % Nach dieser Zeile darf nichts mehr kommen
+%-------------------------------------------------------------------
+% E N D E  D E S  D O K U M E N T S
+%-------------------------------------------------------------------

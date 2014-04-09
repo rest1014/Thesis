@@ -1,0 +1,668 @@
+#LyX file created by tex2lyx 2.0.7.1
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\options final,pointlessnumbers,normalheadings,halfparskip,idxtotoc,headinclude,DIV15,BCOR14mm
+\use_default_options false
+\language english
+\language_package \usepackage{ngerman}
+\inputencoding latin1
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize 12
+\spacing single
+\use_hyperref 1
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 1
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Kapitel:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+chapter{Einteilung in Kapitel}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Einteilung_in_Kapitel"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Keine Umlaute! Keine Leerzeichen!
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+index{Einteilung}
+\backslash
+index{Kapitel@
+\backslash
+texttt{
+\backslash
+textbackslash Kapitel}|textbf}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%======================================================================
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Das hier ist eine Datei, die ein einzelnes Kapitel enthält. Das ganze Buch wird aus solchen Dateien zusammengesetzt, in dem man mittels einer Include Anweisung in MAIN.TEX die einzelnen Kapitel hintereinander hängt.
+\end_layout
+
+\begin_layout Section
+
+Ein Unterkapitel
+\end_layout
+
+\begin_layout Standard
+
+Nach dem Chapter kommen die Sections und dann etwas roter Text gefolgt von unsichtbar (weiss) formatiertem Text. Dann wieder rot und schließlich verstecker Text.
+\end_layout
+
+\begin_layout Standard
+
+
+\color red
+rot geschrieben
+\color inherit
+ ausgeblendet 
+\color white
+weiss geschrieben
+\color inherit
+ 
+\color red
+rot geschrieben
+\color inherit
+ Nächste Zeile versteckt. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+Hide{
+\end_layout
+
+\end_inset
+
+1 Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 2. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. Franz tastet die Taste 
+\begin_inset Box Ovalbox
+position "c"
+hor_pos "c"
+has_inner_box 0
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+
+\begin_layout Standard
+
+strg
+\end_layout
+
+\end_inset
+
+. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Abschnitte
+\end_layout
+
+\begin_layout Standard
+
+Natürlich kann lässt sich der Text noch weiter unterteilen. Die nächste Stufe ist dann ein Unterabschnitt oder auch: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+verb# 
+\backslash
+subsection #
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+
+Unterabschnitte
+\end_layout
+
+\begin_layout Standard
+
+Hier wird gezeigt wie Source-Code darstellt werden kann. Die Einfachheit erschließt sich dem geneigten Betrachter spontan, jedoch erst im Quelltext der LaTeX-Datei. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%---- 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+lstinputlisting
+\end_layout
+
+\end_inset
+
+[caption=iMain.tex, label=lst:beispiel01, frame=tb]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+iMain.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%======================================================================================
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Acrobat und 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+TeX
+\end_layout
+
+\end_inset
+
+nicCenter
+\end_layout
+
+\begin_layout Standard
+
+Hier ein paar eingerahmte Hinweise zum Umgang mit dem 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+TeX
+\end_layout
+
+\end_inset
+
+nicCenter und MiK
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+TeX
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset listings
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Using Acrobat reader
+\end_layout
+
+\begin_layout Plain Layout
+
+TeXnicCenter has the ability to integrate nicely with Adobe Acrobat, such that recently compiled PDF files are opened automatically, and existing open PDF files are closed automatically upon recompilation. This is done using DDE calls to Acrobat.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+You can insert the following lines of command in TeXnicCenter to integrate it with Acrobat. This particularly enables you to compile your files in pdf without having to close the previous document first (necessary in the default option). Integration is setup in the Build | Define Output Profiles menu option. Select a profile "LaTeX=>PDF" or "LaTeX=>PS=>PDF", and click on the viewer window :
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+view project's output:  [v] DDE command.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+command: [DocOpen("%bm.pdf")][FileOpen("%bm.pdf")]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+server: acroview
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+topic: control
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+forward search: [v] DDE command.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+command: [DocOpen("%bm.pdf")][FileOpen("%bm.pdf")]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+server: acroview
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+topic: control
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Close document before running (La)TeX: [v] DDE command
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+command: [DocClose("%bm.pdf")]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+server: acroview
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+topic: control
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

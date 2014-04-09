@@ -1,0 +1,1619 @@
+#LyX file created by tex2lyx 2.0.7.1
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+%%==========================================================================================
+%%
+%% This is file 'FBMStyle_develop.tex'  v0.99
+%%
+%% Beta-Version eines Styles von M. Arnemann
+%% basieren auf einem Muster von Herrn Kappler 
+%% 060905ar
+%% 060912ar
+%%========================================================================================== 
+             % Dokumenttyp // für Dipomarbeiten, Diss
+%       {scrreprt}            % Dokumenttyp // Bericht bis etwa 80 Seiten
+%       {scrartcl}            % Dokumenttyp // Seminararbeien 30 Seiten
+
+
+%==============================================================================
+%  PACKAGES
+%==============================================================================
+%\usepackage{calc}             % Rechnen innerhalb von Latex
+
+
+%%-----------------------------------------------------------------------------
+%% FONTS *** wird nichts aktiviert, dann gilt: Font Computer Modern ********
+%       weitere Fonts: siehe online Help vom TechnicCenter: Font adttributes
+%%-----------------------------------------------------------------------------
+
+% - Ohne Serifen -           % geht nicht
+%\usepackage[scaled=.90]{helvet}  % etwas kleiner skaliert, damit es zu den anderen passt
+%\usepackage{avant}          % geht nicht
+%\usepackage{garamond}
+%
+%% - Mit Serifen -
+%\usepackage{times}          % schmal
+%\usepackage{mathptmx}       % Times + passende Mathefonts
+
+% *** den Vorschlägen aus KOMA-Skript entsprechend, passt dieser Font
+%     für die gewählte Textbreite am besten 
+%\usepackage{palatino}       % breiter              **** sieht ganz gut aus 
+%\usepackage{mathpazo}       % passend zu palatino  **** 
+
+%\usepackage{bookman}        % breiter als palatino! 
+
+%\usepackage{newcent}        % for sophisticated font style
+%\usepackage{lucid}          % geht nicht
+%
+% -- Font Wahl (alternativ)
+%
+%\renewcommand{\familydefault}{phv}  % Adobe Helvetica 
+%\renewcommand{\familydefault}{pag}  % AvantGarde-Book 
+%\renewcommand{\familydefault}{ptm}  % Adobe Times (ziemlich eng)
+%\renewcommand{\familydefault}{ppl}  % Palatino     (weiter) 
+%\renewcommand{\familydefault}{pcr}  % Adobe Courier
+%
+% ** KOMA FONTS ** Schriften im Komaskript umdefinieren
+%
+%\setkomafont{chapter}{\rmfamily\huge}               % Chapter
+%\setkomafont{section}{\rmfamily\Large}              % Section
+%\setkomafont{subsection}{\rmfamily\large}           % subsection
+%\setkomafont{subsection}{\rmfamily\normalsize}       % subsection
+%
+%\setkomafont{chapter}{\sffamily\huge}               % Chapter
+%\setkomafont{section}{\sffamily\Large}              % Section
+%\setkomafont{subsection}{\sffamily\large}           % subsection
+%\setkomafont{subsection}{\sffamily\normalsize}       % subsection
+%\setkomafont{pagehead}{\small\sffamily\slshape}     % Kopfzeile
+%\setkomafont{pagenumber}{\bfseries\sffamily}        % Seitenzahl
+%\setkomafont{sectioning}{\sffamily}                 % Titelzeilen
+%\setkomafont{captionlabel}{\sffamily\bfseries\small}% Schrift für 'Abbildung' usw.
+%\setkomafont{descriptionlabel}{\normalfont\bfseries}
+%\addtokomafont{caption}{\sffamily\small\raggedright}% kleinere Schrift, linksbündig
+
+\setkomafont{footnote}{\normalsize}                     % Marke und Text einer Fußnote
+%\setkomafont{footnotelabel}{\normalsize}            %  
+%\setkomafont{footnotereference}{\large}             % im Text
+%
+%%----------------------------------------------------------------------
+%% Sprache
+%%----------------------------------------------------------------------
+%
+% T1-encoded fonts: auch Wörter mit Umlauten trennen
+\usepackage{url}% much like \verb allow line breaks for paths and URLs
+%\usepackage[OT1]{fontenc}     % Deutsche Umlaute im Text, klappt nicht immer gut
+% Deutsche Umlaute: Eingabe nach ISO 8859-1 (Latin1)
+                              % siehe Emacs: iso-accents-mode
+%\usepackage[utf8]{inputenc}   % Eingabe nach UTF-8
+%\usepackage{ae}               % almost european, virtueller T1-Font
+% Neue deutsche Rechtschreibung
+
+%%----------------------------------------------------------------------
+%% Verschiedenes
+%%----------------------------------------------------------------------
+
+
+\usepackage{latexsym}% Sonderzeichen
+\usepackage{pifont}% dito
+\usepackage{array}% für aufwändigere Tabellen
+% for upright mu (\textmu)
+\usepackage[german=swiss]{csquotes}% für quotes
+
+%%----------------------------------------------------------------------
+%% Satz (Seitenlayout)
+%%----------------------------------------------------------------------
+% -- Zeilenabstand vor typearea setzen! damit ganzzahlige Anzahl von Zeilen pro Seite
+\usepackage{setspace}% Setzt Zeilenabstand  %\onehalfspacing
+%\doublespace	              % 2-facher Abstand
+%\onehalfspace              % 1,5-facher Abstand
+\typearea                  % nach der Schrift
+        [current]          % Heftrand BCOR oben definiert
+%        {calc}             % DIV neu berechnen aus package 
+        {last}             % DIV letzte aus Definition zuvor
+
+\usepackage{multicol}% Mehrspaltiger Satz
+
+%%----------------------------------------------------------------------
+%% Kopf- und Fusszeilen
+%%----------------------------------------------------------------------
+\usepackage{scrpage2}%\pagestyle{scrheadings}            % Kopf- und Fusszeilen
+%\clearscrheadfoot                  % Alles auf "" setzen
+
+%% In [] steht, was am Kaptelanfang angezeigt wird, in {} steht,
+%% was auf den uebrigen Seiten angezeigt wird. 
+%% headmark = aktuelle Ueberschrift
+%% pagemark = aktuelle Seite
+
+
+%%%%% Kopf
+%% ihead = Kopfzeile innen (links bei einseitigem Layout)
+%%\ihead[]{innen}
+%\ihead[\pagemark]{\pagemark}
+
+%% chead = Kopfzeile mittig
+%%\chead[]{mittig}
+
+%% ohead = Kopfzeile aussen (rechts bei einseitigem Layout)
+%\ohead[]{\headmark}
+
+
+%%%%% Fuss
+%% ifoot = Fusszeile innen (links bei einseitigem Layout)
+%%\ifoot[]{innen}
+
+%% cfoot = Kopfzeile mittig
+%%\cfoot[]{mittig}
+
+%% ofoot = Fusszeile aussen (rechts bei einseitigem Layout)
+%%\ofoot[\pagemark]{\pagemark}
+%
+
+
+%%----------------------------------------------------------------------
+%% Bilder , Grafiken
+%%----------------------------------------------------------------------
+%
+\usepackage{epsfig}\usepackage{xspace}% PS Bilder
+% JPEG und PNG 
+\usepackage{subfigure}% Mehrere Bilder in einem mit ver. Bildunterschriften
+%\usepackage{wrapfig}	     % Text um Bild
+%  \begin{wrapfigure}[12]{r}[34pt]{5cm} <figure> \end{wrapfigure}
+%  [number of narrow lines] {placement} [overhang] {width of figure}
+%  Placement is one of   r, l, i, o, R, L, I, O,  for right, left,
+%  inside, outside, (here / FLOAT).
+%
+% *** nicht benötigt
+%\usepackage[DVIPS]{graphicx,color}   % JPEG und PNG  für DVI
+%\usepackage[pdftex]{graphicx,color} % prüfen ob geht
+%\usepackage{epstopdf}
+%\usepackage[final]{graphicx}  % um Graphiken einzubinden (Wirkung klären)
+
+
+%%----------------------------------------------------------------------
+%% Tabellen
+%%----------------------------------------------------------------------
+\usepackage{longtable}% seitenübergreifende Tabellen passt zu KOMA
+%\usepackage{supertab}         % mehrseitige Tabellen
+%% farbige Hyperlinks im PDF
+
+%\usepackage{colortbl}        % farbige Tabellen (v. D. Carlisle)
+% für Index-Erstellung 
+\usepackage{listings}% für Latex Quelltext
+
+%
+%%----------------------------------------------------------------------
+% Glossary
+%%----------------------------------------------------------------------
+%%% geht (noch) nicht  060830ar
+%\usepackage[style=long,         % 
+%            header=none,        %
+%            border=none,        %
+%            number=none,        %
+%            cols=2,             %
+%            toc=true]{glossary} % für Glossary 
+%\usepackage{glossary} 
+%\renewcommand{\glossaryname}{Glossar} %Damit nicht "`Glossary"' erscheint
+%\makeglossary 
+
+%%----------------------------------------------------------------------
+%    Mathematik
+%%----------------------------------------------------------------------
+\usepackage{eqnarray}% nummerierte und unnummerierte Gleichungen/systeme
+
+%%----------------------------------------------------------------------
+%    Sonstiges
+%%----------------------------------------------------------------------
+%\usepackage{bm}              % for boldmath
+%\usepackage{cite}
+%\usepackage{url}
+%   \urlstyle{rm}% for List of Contributors
+%        
+%\usepackage{format-thm}% some predefined theorem environments
+
+%\usepackage{ragged2e}
+%\usepackage{endnotes}
+%\usepackage{xspace}
+
+\usepackage{ifthen}%\usepackage{eso-pic}  %add picture commands (or backgrounds) to every page
+%\usepackage{afterpage}
+%\usepackage{relsize}
+%
+%--- im Main-doc definieren
+%\usepackage{chapterthumb}    % für Skripte: ChapterNummer am Rand
+%\pagestyle{scrheadings}
+%\lohead[\putchapterthumb]{\putchapterthumb}
+%\addtokomafont{chapterthumb}{\bfseries}
+%%
+%%
+%% other interesting packages:
+%%
+% \usepackage{varioref}
+% \usepackage{verbatim}
+% \usepackage{subfigure}
+\usepackage{fancybox}% für schattierte ovale Boxen etc. geht nicht mit Miktex 5 060614ar
+  %Command  	Effect \command{content to be boxed} 
+  % fbox 	      square box
+  % shadowbox 	square box with shadow
+  % doublebox 	double square box
+  % ovalbox 		thin oval box
+  % Ovalbox 		thick oval box
+%
+% \usepackage{tabularx} % automatische Spaltenbreite
+% \usepackage{supertab} % mehrseitige Tabellen
+
+%----------------------------------------------------------------------
+%% Satzspiegel = bedruckter Bereich
+%%----------------------------------------------------------------------
+% \usepackage{typearea}
+%
+%% Manuelle Einstellung des bedruckbaren Bereichs (NUR IM NOTFALL!)
+% \areaset
+%         [20mm]                % Heftrand
+%         {150mm}               % Breite bedruckbarer Bereich
+%         {237mm}               % Höhe dito
+%%
+%% KOMA lässt gerne oben zu wenig Rand
+%% hiermit kann man den oberen Rand verschieben
+% \setlength{\topmargin}{+3mm}  % gut mit Strich über Fusszeile
+
+
+%% Einzug der ersten Zeile eines Absatzes. Im englischen Sprachraum
+%% ist es üblich, einen neuen Absatz durch Einzug zu kennzeichnen.
+%% Wir tun das üblicherweise durch einen größeren Zeilendurchschuß
+%
+%\setlength{\parskip}{3pt}               % Abstand von Absatz zu Absatz
+%\setlength{\parindent}{0pt}             % Einzug 1. Zeile
+%\setlength{\mathindent}{1em minus 1em} % für fleqn
+
+
+%%
+%%
+%%  siehe Diplomarbeit von  Diplomarbeit mit LaTeX
+%   Copyright (c) 2002-2005  Tobias Erbsland, Andreas Nitsch
+%\usepackage[savemem]{listings} % für Listings
+%\lstloadlanguages{TeX}
+
+
+%----------------------------------------------------------------------
+% Paket um Listings sauber zu formatieren.
+% SUPER !
+%----------------------------------------------------------------------
+%\usepackage[savemem]{listings}
+\usepackage{listings}%\lstloadlanguages{LaTeX,Scilab,Delphi,Fortran,Matlab}
+
+% ---------------------------------------------------------------------------
+% Listing Definationen für PHP Code
+% ---------------------------------------------------------------------------
+\definecolor{lbcolor}{rgb}{0.85,0.85,0.85}
+\lstset{language=[LaTeX]TeX,
+	numbers=left,
+	stepnumber=1,
+	numbersep=5pt,
+	numberstyle=\tiny,
+	breaklines=true,
+	breakautoindent=true,
+	postbreak=\space,
+	tabsize=2,
+	basicstyle=\ttfamily\footnotesize,
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	backgroundcolor=\color{lbcolor}}
+
+% ---------------------------------------------------------------------------
+% footnote
+% ---------------------------------------------------------------------------
+%\deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}} % std
+\deffootnote{1em}{1.5em}{\textsuperscript\thefootnotemark\ } %Text klebt nicht an Zahl
+
+% ---------------------------------------------------------------------------
+% Neue Umgebungen
+% ---------------------------------------------------------------------------
+\newenvironment{ListChanges}{\begin{list}{$\diamondsuit$}{}}{\end{list}}
+%
+%% **** END OF CLASS MStyle ****
+
+
+\end_preamble
+\options final,pointlessnumbers,normalheadings,halfparskip,idxtotoc,headinclude,DIV15,BCOR14mm
+\use_default_options false
+\language english
+\language_package \usepackage{ngerman}
+\inputencoding latin1
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize 12
+\spacing single
+\use_hyperref 1
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 1
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%  Hauptdatei
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%  Projekt: Beispiel 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%  Autor:   Arnemann
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%  Status:  
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%  Datum:   060814ar
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           060815ar : Sperrvermerk und Zusammenfassung ergänzt
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           060830ar : v4 Anhang Seitennummerierung, viele Tabellen 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           060905ar : v5
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           060908ar : v6
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           060912ar : v6 FBMStyle_develop
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%           061025ar : v7 Richtlinentext entfernt
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%===================================================================
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% P R Ä A M B E L
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "FBMStyle_Develop.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+input{FBMStyle}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%****
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "000_Setup/pdf-setup.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "000_Setup/macros.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Macros lagen
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{001_Titel/Titelseite}     
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/Titelseite_Neu.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+onehalfspacing
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+linespread{1.2}          % Zeilenabstand erst nach dem Titel setzen !
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%===================================================================
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% B E G I N N  D E S  D O K U M E N T S
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Hier kommen die einzelnen Kapitel, die jeweils in einem eigenen
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% Folder stehen. Dateiendung MUSS .tex sein. Wird hier nicht angegeben. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% W I C H T I G : Pfade in Unix-Syntax d.h.:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% 0010/chapter und NICHT 0010
+\backslash
+chapter !!!
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% ALLE PFADE RELATIV ZU DIESER DATEI!!
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{document}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/-pagestyle-pre.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/Erklaerung.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Hochschul-spezifisch
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/Danksagung.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-----------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/Inhalt_Listen.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{001_Titel/Nomenklatur}    % Formel und Abkürzungsverzeichnis 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/Zusammenfassung.lyx"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% als Kurzfassung formuliert
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  Hauptteil
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "001_Titel/-pagestyle-main.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "010_Struktur/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "020_Schriften/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "025_Abstaende/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "030_Listen/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "040_Mathe/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "050_Tabellen/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%                                  % eps: sehr große Dateien: jpg besser 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{060_Bilder/bilder_eps}   % DVI:okok  PDF:niO  PS:ok   DVI->PS->PDF:     eps:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "060_Bilder/bilder_jpg.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% DVI:ok?   PDF:ok   PS:niO  DVI->PS->PDF:niO   jpg:++ 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%                                              pdf: png:ok  
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "060_Bilder/bilder_pdf.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% DVI:niO   PDF:ok   PS:niO  DVI->PS->PDF:niO   pdf:+ macht Problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{060_Bilder/bilder_ps}    % DVI:niO  PDF:niO  PS:niO  DVI->PS->PDF:ok
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{060_Bilder/bilder_ps_in} % DVI:niO   PDF:niO  PS:niO  DVI->PS->PDF:niO
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "070_Referenzen/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "080_Macros/Chapter.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Literaturliste
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "030_Listen/Literatur1fach.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Pfad zur Datei
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "030_Listen/Literatur.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Pfad zur Datei
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Index
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Alles was hier kommt, landet im Anhang
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+include{090_Anhang/Anhang02}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+preview false
+filename "090_Anhang/Anhang01.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{document}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Nach dieser Zeile darf nichts mehr kommen
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% E N D E  D E S  D O K U M E N T S
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%-------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

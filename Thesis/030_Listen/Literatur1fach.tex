@@ -1,0 +1,70 @@
+%-----------------------------------------------------------
+% Literaturliste
+%-----------------------------------------------------------
+% Format der Eintraege:
+%   \lit{NAME DES EINTRAGS}{VERFASSER}{TITEL}{AUFLAGE}
+% Hinweise:
+%   \lit ist ein Makro, das in macro.tex definiert ist.
+%   Es bastelt aus den 4 Uebergabeparametern das richtige
+%   Format fuer bibtex zusammen. Damit ist man bei der 
+%   Formatierung der Literaturliste freier, da sie nur
+%   an einer Stelle geaendert werden muss. Zeilenumbrueche
+%   am Ende der Eingabeparameter werden automatisch 
+%   eingefuegt. Soll ein Parameter ueber mehere Zeilen
+%   gehen, so muss der Umbruch im Parameter uebergeben
+%   werden.
+%
+%   Zitiert wird mit \cite{NAME_DES_EINTRAGS}
+%
+%   Die Eintraege selber werden in der Reihenfolge, in
+%   der sie in dieser Datei stehen nummeriert.
+%-----------------------------------------------------------
+
+% literatur.tex enthaelt nur Eintraege, Header und Footer stehen hier,
+% damit literatur.tex sortiert werden kann!
+%
+
+Dieses Verzeichnis ist noch NICHT nach DIN.
+
+\begin{thebibliography}{15}
+       % Die folgende Zeile erzwingt einen Eintag ins Inhaltsverz.
+       \addcontentsline{toc}{section}{Literatur} 
+       \label{cha:LitVerzeichnis}
+%===========================================================
+
+\lit{din1505}{NORM DIN 1505-2 Ausgabe 1984-01}
+               {Titelangaben von Dokumenten; Zitierregeln,}
+						   {Beuth-Verlag, 2006}
+
+\lit{din5008}{NORM DIN 5008 Ausgabe 2005-05}
+              {Schreib- und Gestaltungsregeln für die Textverarbeitung,}
+              {Beuth-Verlag, 2006}
+
+\lit{din5008web}{NORM DIN 5008 Ausgabe 2005-05}
+              {Schreib- und Gestaltungsregeln für die Textverarbeitung,}
+              {http://www.din5008.de/p0400010.htm, Stand 23.09.2006}
+				  
+\lit{Einstein}{Einstein, Albert}
+              {Komische Gleichungen}
+              {Relativverlag, 1921}
+
+\lit{komabook}{Kohm, Markus; Morawski, Jens-Uwe}
+							{\KOMAScript{} eine Sammlung von Klassen und Paketen für {\LaTeX2e}}
+							{Lehmans Fachbuchhandlung, ISBN 3-86541-089-8, Januar 2006}
+
+\lit{komaweb}{\KOMAScript{} Documentation project}
+	            {\href{http://koma-script.net.tf}{http://koma-script.net.tf},}
+	            {Sep. 2006} 
+\lit{DIN22}	  {DIN-Taschenbuch 22 Ausgabe 1999-03}
+              {Einheiten und Begriffe für physikalische Größen}
+              {Beuth-Verlag, 2006} % 98 Euro
+\lit{DIN202}	{DIN-Taschenbuch 202 Ausgabe 1994-07}
+              {Formelzeichen, Formelsatz, Mathematische Zeichen und Begriffe}
+              {Beuth-Verlag, 2006}% 81 Euro   
+%\lit{DIN461}	{NORM DIN 461 Ausgabe 1973-03}
+%              {Graphische Darstellung in Koordinatensystemen}
+%              {Beuth-Verlag, 2006}% 40 Euro   
+
+
+%===========================================================
+\end{thebibliography}
